@@ -1,15 +1,15 @@
 package coindesk.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.util.Map;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CoinDesk {
+    @JsonProperty("time")
     private TimeBuilder time;
-    private CurrencyBuilder bpi;
+    @JsonProperty("bpi")
+    private Map<String, DataCurrency> bpi;
 
-    public CoinDesk(){}
-    public CoinDesk(TimeBuilder time, CurrencyBuilder bpi) {
-        this.time = time;
-        this.bpi = bpi;
-    }
 }
