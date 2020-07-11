@@ -1,4 +1,7 @@
 package services.exception;
 
-public class UserValidationException {
+public class UserValidationException extends RuntimeException{
+    public UserValidationException(final String message) {
+        super(message);
+    }
 }

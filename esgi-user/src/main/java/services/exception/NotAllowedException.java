@@ -1,4 +1,7 @@
 package services.exception;
 
-public class NotAllowedException {
+public class NotAllowedException extends RuntimeException{
+    public NotAllowedException(final String message) {
+        super(message);
+    }
 }
