@@ -5,6 +5,9 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/adapter/controller/src/pom.xml" />
+        <option value="$PROJECT_DIR$/adapter/controller/pom.xml" />
+        <option value="$PROJECT_DIR$/adapter/encoder/sha256/pom.xml" />
       </list>
     </option>
   </component>

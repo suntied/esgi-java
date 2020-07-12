@@ -15,6 +15,11 @@
         <module>esgi-graph</module>
         <module>esgi-tools</module>
         <module>esgi-user</module>
+        <module>adapter/controller</module>
+        <module>adapter/encoder/sha256</module>
+        <module>adapter/repository/in-memory-simple</module>
+        <module>adapter/id-generator/jug</module>
+        <module>adapter/id-generator/uuid</module>
     </modules>
     <build>
         <plugins>

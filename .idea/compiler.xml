@@ -6,13 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="adapter-controller" />
         <module name="esgi-graph" />
+        <module name="adapter-encoder-sha256" />
         <module name="esgi-user" />
         <module name="javafx" />
+        <module name="adapter-id-generator-jug" />
+        <module name="adapter-id-generator-uuid" />
         <module name="bitcoin-api" />
         <module name="esgi-tools" />
         <module name="domain" />
+        <module name="adapter-repository-memory" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="adapter" target="1.5" />
+      <module name="adapter-uuid" target="14.0.1" />
+    </bytecodeTargetLevel>
   </component>
 </project>
