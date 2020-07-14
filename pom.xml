@@ -20,6 +20,7 @@
         <module>adapter/repository/in-memory-simple</module>
         <module>adapter/id-generator/jug</module>
         <module>adapter/id-generator/uuid</module>
+        <module>ui</module>
     </modules>
     <build>
         <plugins>

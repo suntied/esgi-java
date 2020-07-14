@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>esgi</groupId>
-    <artifactId>spring</artifactId>
+    <artifactId>ui</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring</name>
+    <name>ui</name>
     <description>Spring Boot</description>
 
     <properties>
