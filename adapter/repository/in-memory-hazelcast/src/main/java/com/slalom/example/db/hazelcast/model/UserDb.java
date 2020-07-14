@@ -1,6 +1,7 @@
 package com.slalom.example.db.hazelcast.model;
 
-import com.slalom.example.domain.entity.User;
+import entity.User;
+
 import java.io.Serializable;
 
 public class UserDb implements Serializable {

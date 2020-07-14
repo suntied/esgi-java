@@ -3,5 +3,4 @@ module esgi.db.simple {
 
 	requires domain;
 	requires services;
-	requires java.persistence;
 }
