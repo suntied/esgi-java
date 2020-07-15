@@ -8,14 +8,7 @@
         <option value="$PROJECT_DIR$/adapter/controller/src/pom.xml" />
         <option value="$PROJECT_DIR$/adapter/controller/pom.xml" />
         <option value="$PROJECT_DIR$/adapter/encoder/sha256/pom.xml" />
-        <option value="$PROJECT_DIR$/spring/pom.xml" />
-        <option value="$PROJECT_DIR$/adapter/repository/in-memory-hazelcast/pom.xml" />
       </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/adapter/repository/in-memory-simple/pom.xml" />
-      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_14" project-jdk-name="openjdk-14" project-jdk-type="JavaSDK">

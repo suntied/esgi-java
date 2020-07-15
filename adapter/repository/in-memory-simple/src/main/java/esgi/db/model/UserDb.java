@@ -1,7 +1,12 @@
 package esgi.db.model;
 
 import entity.User;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import java.io.Serializable;
+@Entity
+@Table(name = "user")
 public class UserDb implements Serializable {
 
     private static final long serialVersionUID = 1L;
