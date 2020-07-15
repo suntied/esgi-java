@@ -12,13 +12,13 @@
         <module name="adapter-encoder-sha256" />
         <module name="adapter-controller" />
         <module name="esgi-graph" />
+        <module name="spring" />
         <module name="adapter-repository-memory (1)" />
         <module name="adapter-id-generator-uuid" />
         <module name="javafx" />
         <module name="bitcoin-api" />
         <module name="esgi-tools" />
         <module name="domain" />
-        <module name="ui" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -29,7 +29,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="ui" options="-parameters" />
+      <module name="spring" options="-parameters" />
     </option>
   </component>
 </project>

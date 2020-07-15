@@ -1,17 +1,8 @@
 package entity;
 
-import javax.persistence.*;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-
-@Entity
-@Table(name = "users")
 public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+
     private final String id;
-    @Email
-    @NotBlank
     private final String email;
     private final String password;
     private final String lastName;
