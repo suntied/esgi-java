@@ -1,15 +1,28 @@
 package coindesk.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import java.time.LocalDate;
 
-import java.util.Map;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class CoinDesk {
-    @JsonProperty("time")
-    private TimeBuilder time;
-    @JsonProperty("bpi")
-    private Map<String, DataCurrency> bpi;
+    private LocalDate time;
+    private Long currency;
 
+    public CoinDesk(String time, Long currency){
+        LocalDate localDate = LocalDate.parse(time);
+        this.time=localDate;
+        this.currency=currency;
+    }
+
+    public CoinDesk(LocalDate time, Long currency) {
+        this.time = time;
+        this.currency = currency;
+    }
+
+    public LocalDate getTime() {
+        return time;
+    }
+
+    public Long getCurrency() {
+        return currency;
+    }
 }

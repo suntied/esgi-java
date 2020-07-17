@@ -1,23 +1,21 @@
 package coindesk.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
+import java.time.LocalDate;
+
 public class DataCurrency {
-    private String code;
-    private String symbol;
-    private String rate;
+    private LocalDate time;
+    private Long value;
 
-    public String getCode() {
-        return code;
+    public DataCurrency(String time, Long value){
+        LocalDate localDate = LocalDate.parse(time);
+        this.time=localDate;
+        this.value=value;
     }
 
-    public String getSymbol() {
-        return symbol;
-    }
-
-    public String getRate() {
-        return rate;
+    public DataCurrency(LocalDate time, Long value) {
+        this.time = time;
+        this.value = value;
     }
 
 }

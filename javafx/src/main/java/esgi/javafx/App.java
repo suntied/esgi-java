@@ -1,6 +1,6 @@
 package esgi.javafx;
 
-import entity.User;
+import coindesk.model.CoinDesk;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,6 +8,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.List;
+
+import static services.CoinDeskService.getCoindeskHistorical;
 
 /**
  * JavaFX App

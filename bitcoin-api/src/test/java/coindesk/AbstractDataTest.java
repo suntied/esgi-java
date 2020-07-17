@@ -1,11 +1,15 @@
 package coindesk;
 
 import coindesk.exception.CoinDeskException;
+import coindesk.historical.HistoricalData;
 import coindesk.model.CoinDesk;
+import coindesk.model.HistoricalCurrencyParser;
 import coindesk.realtime.RealTimeData;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import services.CoinDeskService;
+
+import java.util.List;
 
 class AbstractDataTest {
 
@@ -20,16 +24,17 @@ class AbstractDataTest {
         }
     }
     @Test
-    void getCoinDesk(){
+    void getHistorialCoinDesk(){
         String json = "";
         try {
-            CoinDeskRepository realTimeData = new RealTimeData();
-            realTimeData.getBPI();
-            json = realTimeData.getLastResponse();
+            CoinDeskRepository historicalData= new HistoricalData();
+            historicalData.getBPI();
+            json = historicalData.getLastResponse();
         } catch (CoinDeskException e) {
             e.printStackTrace(System.err);
         }
-        CoinDesk coinDesk = new CoinDeskService().parseJsonToCoinDesk(json);
+        HistoricalCurrencyParser historicalCurrencyParser = new CoinDeskService().parseHistoricalToHistoricalObject(json);
+        List<CoinDesk> coinDesk = new CoinDeskService().parserHistoricalToCoinDesk(historicalCurrencyParser);
         Assertions.assertNotNull(coinDesk);
     }
 }
