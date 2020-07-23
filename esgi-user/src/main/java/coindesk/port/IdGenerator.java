@@ -1,4 +1,4 @@
-package services.port;
+package coindesk.port;
 
 public interface IdGenerator {
     String generate();
