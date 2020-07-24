@@ -11,27 +11,47 @@ import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
 import model.Graph;
+import model.OptionGraph;
 import port.GraphRepository;
 import servicesgraph.ApiGeneratorGraph;
 
 
 public class SecondaryController {
+    private OptionGraph optionGraph;
     @FXML
-    LineChart<String,Long> lineChart;
+    LineChart<String,Double> lineChart;
     @FXML
     private void switchToPrimary() throws IOException {
         App.setRoot("primary");
     }
     public void getHistorical(ActionEvent event){
 
-        XYChart.Series<String,Long> series = new XYChart.Series<String, Long>();
+        XYChart.Series<String,Double> series = new XYChart.Series<>();
         GraphRepository graphRepository = new ApiGeneratorGraph();
-        Graph graph = graphRepository.generateGraph(LocalDate.now());
-        LocalDateTime currentTime = LocalDateTime.now();
+        //Get OptionGraph
+        configOption();
+        Graph graph = graphRepository.generateGraph(optionGraph);
 
-        graph.getCurve().getListOfPoint().forEach(f->series.getData().add(new XYChart.Data<String,Long>(f.getTime().toString(),f.getCurrency())));
+        graph.getCurve().getListOfPoint().forEach(
+                f->series.getData().add(
+                        new XYChart.Data<String,Double>(
+                                f.getTime().toString(),f.getCurrency())));
         lineChart.getData().add(series);
-
-
+    }
+    private void configOption(){
+        if(optionGraph==null)
+            optionGraph = new OptionGraph(null,null,null,null,null);
+    }
+    public void configBegin(String begin){
+        optionGraph.setBegin(LocalDate.parse(begin));
+    }
+    public void configEnd(String end){
+        optionGraph.setBegin(LocalDate.parse(end));
+    }
+    public void configBotThreshold(Double botThreshold){
+        optionGraph.setBotThreshold(botThreshold);
+    }
+    public void configTopThreshold(Double topThreshold){
+        optionGraph.setBotThreshold(topThreshold);
     }
 }

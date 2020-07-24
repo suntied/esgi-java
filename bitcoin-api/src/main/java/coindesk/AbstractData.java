@@ -47,16 +47,17 @@ public abstract class AbstractData implements CoinDeskRepository{
         String line;
         try {
             mConnection = (HttpURLConnection) url.openConnection();
-            mConnection.setRequestMethod("GET");//TODO: alternative
-            mConnection.setReadTimeout(0);//TODO: alternative
+            mConnection.setRequestMethod("GET");
+            mConnection.setReadTimeout(0);
             mResponseReader = new BufferedReader(new InputStreamReader(mConnection.getInputStream()));
-            while ((line = mResponseReader.readLine()) != null) {//TODO: remove duct tape
+            while ((line = mResponseReader.readLine()) != null) {
                 mStringBuilder.append(line).append(NEWLINE);
             }
         } catch (IOException ioException) {
             throw new CoinDeskException(ioException.getMessage(), CoinDeskException.IO_ERROR);
         }
     }
+
 
     /**
      *
