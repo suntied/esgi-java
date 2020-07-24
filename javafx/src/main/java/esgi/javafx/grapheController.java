@@ -16,13 +16,14 @@ import port.GraphRepository;
 import servicesgraph.ApiGeneratorGraph;
 
 
-public class SecondaryController {
+public class grapheController {
     private OptionGraph optionGraph;
     @FXML
     LineChart<String,Double> lineChart;
+
     @FXML
-    private void switchToPrimary() throws IOException {
-        App.setRoot("primary");
+    private void switchToProfile() throws IOException {
+        App.setRoot("profil");
     }
     public void getHistorical(ActionEvent event){
 
@@ -54,5 +55,6 @@ public class SecondaryController {
     public void configTopThreshold(Double topThreshold){
         optionGraph.setBotThreshold(topThreshold);
     }
+
 
 }

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esgi.javafx.registrationController">
+   <children>
+      <Pane prefHeight="482.0" prefWidth="298.0" style="-fx-background-color: #9932CC;">
+         <children>
+            <Ellipse fill="LIGHTCORAL" layoutX="97.0" layoutY="210.0" radiusX="8.0" radiusY="10.0" strokeType="INSIDE">
+               <stroke>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </stroke></Ellipse>
+            <Ellipse fill="LIGHTCORAL" layoutX="134.0" layoutY="210.0" radiusX="8.0" radiusY="10.0" strokeType="INSIDE">
+               <stroke>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </stroke></Ellipse>
+            <Ellipse fill="LIGHTCORAL" layoutX="168.0" layoutY="210.0" radiusX="8.0" radiusY="10.0" strokeType="INSIDE">
+               <stroke>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </stroke></Ellipse>
+            <Label layoutX="52.0" layoutY="144.0" text="BITCOIN APP">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+         </children></Pane>
+
+      <TextField layoutX="354.0" layoutY="97.0" prefHeight="37.0" prefWidth="212.0" promptText="ID" />
+      <PasswordField layoutX="358.0" layoutY="172.0" prefHeight="44.0" prefWidth="203.0" promptText="PASSWORD" />
+      <Button fx:id="started" layoutX="475.0" layoutY="269.0" mnemonicParsing="false" onAction="#switchToProfile" prefHeight="31.0" prefWidth="86.0" style="-fx-background-color: #F08080;" text="Get Started" />
+      <Label layoutX="358.0" layoutY="54.0" text="Sign in ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

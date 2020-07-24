@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esgi.javafx.profileController">
+   <children>
+      <VBox prefHeight="577.0" prefWidth="171.0" style="-fx-background-color: #9932CC;">
+         <children>
+            <Button fx:id="btnProfile" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToProfile" prefHeight="41.0" prefWidth="171.0" style="-fx-background-color: #9932CC;" text="POFILE" textFill="#f5f2f2" VBox.vgrow="ALWAYS">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="btnGraphProfile" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#switchToGraphe" prefHeight="38.0" prefWidth="181.0" style="-fx-background-color: #9932CC;" text="GRAPH" textAlignment="JUSTIFY" textFill="#f9f2f2">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Label layoutX="236.0" layoutY="43.0" text="Preference">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="236.0" layoutY="95.0" text="Begin date  :" />
+      <Label layoutX="238.0" layoutY="141.0" text="End date :" />
+      <Button fx:id="btngrapheG" layoutX="328.0" layoutY="281.0" mnemonicParsing="false" onAction="#switchToGraphe" text="Generate" />
+      <TextField layoutX="328.0" layoutY="173.0" prefHeight="25.0" prefWidth="184.0" />
+      <Label layoutX="234.0" layoutY="177.0" text="Bot Threshold :" />
+      <Label layoutX="233.0" layoutY="216.0" text="Top Threshold :" />
+      <TextField layoutX="328.0" layoutY="212.0" prefHeight="25.0" prefWidth="184.0" />
+      <DatePicker layoutX="329.0" layoutY="91.0" prefHeight="25.0" prefWidth="184.0" />
+      <DatePicker layoutX="329.0" layoutY="137.0" prefHeight="25.0" prefWidth="184.0" />
+   </children>
+</AnchorPane>
