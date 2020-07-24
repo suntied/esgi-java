@@ -6,13 +6,14 @@ import java.time.LocalDateTime;
 import java.time.Month;
 import java.util.List;
 
-import coindesk.model.CoinDesk;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
+import model.Graph;
+import port.GraphRepository;
+import servicesgraph.ApiGeneratorGraph;
 
-import static services.CoinDeskService.getCoindeskHistorical;
 
 public class SecondaryController {
     @FXML
@@ -22,10 +23,15 @@ public class SecondaryController {
         App.setRoot("primary");
     }
     public void getHistorical(ActionEvent event){
+
         XYChart.Series<String,Long> series = new XYChart.Series<String, Long>();
-        List<CoinDesk> list = getCoindeskHistorical();
+        GraphRepository graphRepository = new ApiGeneratorGraph();
+        Graph graph = graphRepository.generateGraph(LocalDate.now());
         LocalDateTime currentTime = LocalDateTime.now();
-        list.stream().forEach(f->series.getData().add(new XYChart.Data<String,Long>(f.getTime().toString(),f.getCurrency())));
+
+        graph.getCurve().getListOfPoint().forEach(f->series.getData().add(new XYChart.Data<String,Long>(f.getTime().toString(),f.getCurrency())));
         lineChart.getData().add(series);
+
+
     }
 }
