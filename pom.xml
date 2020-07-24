@@ -15,6 +15,7 @@
         <module>esgi-graph</module>
         <module>esgi-tools</module>
         <module>esgi-user</module>
+        <module>spring</module>
     </modules>
     <build>
         <plugins>

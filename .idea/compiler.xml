@@ -12,6 +12,7 @@
         <module name="bitcoin-api" />
         <module name="esgi-tools" />
         <module name="domain" />
+        <module name="spring" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,5 +22,10 @@
       <module name="adapter-id-generator-uuid" target="14.0.1" />
       <module name="adapter-repository-memory" target="14.0.1" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring" options="-parameters" />
+    </option>
   </component>
 </project>
