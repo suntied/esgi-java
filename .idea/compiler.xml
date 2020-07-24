@@ -14,5 +14,12 @@
         <module name="domain" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="adapter-controller" target="14.0.1" />
+      <module name="adapter-encoder-sha256" target="14.0.1" />
+      <module name="adapter-id-generator-jug" target="14.0.1" />
+      <module name="adapter-id-generator-uuid" target="14.0.1" />
+      <module name="adapter-repository-memory" target="14.0.1" />
+    </bytecodeTargetLevel>
   </component>
 </project>
