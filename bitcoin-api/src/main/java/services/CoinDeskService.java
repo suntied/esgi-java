@@ -8,6 +8,7 @@ import coindesk.model.HistoricalCurrencyParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -48,16 +49,49 @@ public class CoinDeskService {
         return list;
     }
     public static List<CoinDesk> getCoindeskHistorical(){
+        return getCoinDesks("","","");
+
+    }
+    public static List<CoinDesk> getCoindeskHistoricalWithDatesAndCurrency(String dateBegin, String dateEnd, String currency){
+        return getCoinDesks(dateBegin,dateEnd,currency);
+    }
+    public static List<CoinDesk> getCoindeskHistoricalWithDatesOnly(String dateBegin, String dateEnd){
+        return getCoinDesks(dateBegin,dateEnd,"");
+    }
+
+    private static List<CoinDesk> getCoinDesks(String dateBegin, String dateEnd, String currency) {
         String json = "";
-        try {
-            CoinDeskRepository historicalData= new HistoricalData();
-            historicalData.getBPI();
-            json = historicalData.getLastResponse();
-        } catch (CoinDeskException e) {
-            e.printStackTrace(System.err);
+        if (dateBegin.equals("") && dateEnd.equals("") && currency.equals("")) {
+            try {
+                CoinDeskRepository historicalData = new HistoricalData();
+                historicalData.getBPI();
+                json = historicalData.getLastResponse();
+            } catch (CoinDeskException e) {
+                e.printStackTrace(System.err);
+            }
+            HistoricalCurrencyParser historicalCurrencyParser = new CoinDeskService().parseHistoricalToHistoricalObject(json);
+            return new CoinDeskService().parserHistoricalToCoinDesk(historicalCurrencyParser);
+        }else if(!dateBegin.equals("") && !dateEnd.equals("") && currency.equals("")){
+            try {
+                CoinDeskRepository historicalData = new HistoricalData();
+                historicalData.getBPI(LocalDate.parse(dateBegin),LocalDate.parse(dateEnd));
+                json = historicalData.getLastResponse();
+            } catch (CoinDeskException e) {
+                e.printStackTrace(System.err);
+            }
+            HistoricalCurrencyParser historicalCurrencyParser = new CoinDeskService().parseHistoricalToHistoricalObject(json);
+            return new CoinDeskService().parserHistoricalToCoinDesk(historicalCurrencyParser);
+        }else{
+
+            try {
+                CoinDeskRepository historicalData = new HistoricalData();
+                historicalData.getBPI(LocalDate.parse(dateBegin),LocalDate.parse(dateEnd),currency);
+                json = historicalData.getLastResponse();
+            } catch (CoinDeskException e) {
+                e.printStackTrace(System.err);
+            }
+            HistoricalCurrencyParser historicalCurrencyParser = new CoinDeskService().parseHistoricalToHistoricalObject(json);
+            return new CoinDeskService().parserHistoricalToCoinDesk(historicalCurrencyParser);
         }
-        HistoricalCurrencyParser historicalCurrencyParser = new CoinDeskService().parseHistoricalToHistoricalObject(json);
-        List<CoinDesk> coinDesk = new CoinDeskService().parserHistoricalToCoinDesk(historicalCurrencyParser);
-        return coinDesk;
     }
 }

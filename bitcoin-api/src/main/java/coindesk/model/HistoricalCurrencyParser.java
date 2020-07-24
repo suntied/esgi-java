@@ -9,12 +9,12 @@ import java.util.Map;
 public class HistoricalCurrencyParser{
 
     @JsonProperty("bpi")
-    private Map<String,Long> bpi;
+    private Map<String,Double> bpi;
 
     public HistoricalCurrencyParser(){
 
     }
-    public Map<String, Long> getBpi() {
+    public Map<String, Double> getBpi() {
         return bpi;
     }
 }
