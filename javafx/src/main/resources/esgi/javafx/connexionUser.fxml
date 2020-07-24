@@ -2,25 +2,18 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esgi.javafx.connexionUserController">
    <children>
       <BorderPane layoutX="-5.0" layoutY="-1.0" prefHeight="448.0" prefWidth="611.0" style="-fx-background-color: #ffff;">
-         <left>
-            <Pane fx:id="pnstack" prefHeight="400.0" prefWidth="295.0" style="-fx-background-color: #9932CC;" styleClass="linear-grad" BorderPane.alignment="CENTER">
-               <children>
-                  <Ellipse fx:id="bntClose" fill="#ff1f1f" layoutX="20.0" layoutY="14.0" radiusX="6.0" radiusY="8.0" stroke="#f51111" strokeType="INSIDE" />
-                  <Ellipse fx:id="btnOpen" fill="#74ff1f" layoutX="43.0" layoutY="14.0" radiusX="7.0" radiusY="8.0" stroke="BLACK" strokeType="INSIDE" />
-
-               </children></Pane>
-         </left>
          <right>
             <Pane prefHeight="400.0" prefWidth="316.0" BorderPane.alignment="CENTER">
                <children>
-                  <TextField fx:id="idUser" layoutX="50.0" layoutY="123.0" prefHeight="37.0" prefWidth="229.0" text="ID" />
-                  <PasswordField fx:id="password" layoutX="50.0" layoutY="200.0" prefHeight="35.0" prefWidth="232.0" text="PASSWORD" />
+                  <TextField fx:id="idUser" layoutX="50.0" layoutY="123.0" prefHeight="37.0" prefWidth="229.0" promptText="ID" />
+                  <PasswordField fx:id="password" layoutX="50.0" layoutY="200.0" prefHeight="35.0" prefWidth="232.0" promptText="PASSWORD" />
                   <Button fx:id="SignIn" layoutX="177.0" layoutY="252.0" mnemonicParsing="false" onAction="#switchToProfile" prefHeight="40.0" prefWidth="102.0" style="-fx-background-color: #F08080;" text="Sign in" />
                   <Button fx:id="signUp" layoutX="25.0" layoutY="330.0" mnemonicParsing="false" onAction="#switchToInscription" prefHeight="47.0" prefWidth="261.0" style="-fx-background-color: #F08080;" text="Don't have an account ? Sign up" />
                   <Label layoutX="50.0" layoutY="69.0" prefHeight="37.0" prefWidth="154.0" text="Sign in ">
@@ -31,6 +24,73 @@
                </children>
             </Pane>
          </right>
+         <left>
+            <Pane fx:id="pnstack" prefHeight="400.0" prefWidth="295.0" style="-fx-background-color: #9932CC;" styleClass="linear-grad" BorderPane.alignment="CENTER">
+               <children>
+                  <Ellipse fx:id="bntClose" fill="#ff1f1f" layoutX="20.0" layoutY="14.0" radiusX="6.0" radiusY="8.0" stroke="#f51111" strokeType="INSIDE" />
+                  <Ellipse fx:id="btnOpen" fill="#74ff1f" layoutX="43.0" layoutY="14.0" radiusX="7.0" radiusY="8.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Text layoutX="36.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BITCOIN APP" wrappingWidth="242.76171875">
+                     <font>
+                        <Font name="System Bold" size="31.0" />
+                     </font>
+                  </Text>
+                  <Ellipse fill="LIGHTCORAL" layoutX="83.0" layoutY="250.0" radiusX="14.0" radiusY="12.0" strokeType="INSIDE">
+                     <stroke>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.6973684430122375" green="0.320703387260437" blue="0.320703387260437" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </stroke>
+                  </Ellipse>
+                  <Ellipse fill="LIGHTCORAL" layoutX="125.0" layoutY="250.0" radiusX="15.0" radiusY="12.0" strokeType="INSIDE">
+                     <stroke>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </stroke>
+                  </Ellipse>
+                  <Ellipse fill="LIGHTCORAL" layoutX="164.0" layoutY="250.0" radiusX="16.0" radiusY="12.0" strokeType="INSIDE">
+                     <stroke>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.6973684430122375" green="0.320703387260437" blue="0.320703387260437" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </stroke>
+                  </Ellipse>
+
+               </children></Pane>
+         </left>
       </BorderPane>
    </children>
 </AnchorPane>

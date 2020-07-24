@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 public class connexionUserController {
     @FXML
     private void switchToInscription() throws IOException {
-        App.setRoot("inscription");
+        App.setRoot("registration");
     }
 
     @FXML

@@ -54,4 +54,5 @@ public class SecondaryController {
     public void configTopThreshold(Double topThreshold){
         optionGraph.setBotThreshold(topThreshold);
     }
+
 }
