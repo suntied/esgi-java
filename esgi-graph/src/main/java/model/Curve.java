@@ -1,12 +1,16 @@
 package model;
 
-import javafx.scene.shape.Line;
+import coindesk.model.CoinDesk;
 
 import java.util.List;
 
 public class Curve {
-    List<Line> listOfLine;
-    public Curve(List<Line> listOfLine) {
-        this.listOfLine = listOfLine;
+    private List<CoinDesk> listOfPoint;
+    public Curve(List<CoinDesk> listOfPoint) {
+        this.listOfPoint = listOfPoint;
+    }
+
+    public List<CoinDesk> getListOfPoint() {
+        return listOfPoint;
     }
 }

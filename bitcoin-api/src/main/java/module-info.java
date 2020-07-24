@@ -8,4 +8,5 @@ module bitcoin.api {
     exports coindesk.model;
     exports coindesk.historical;
     opens coindesk.model;
+    exports coindesk;
 }

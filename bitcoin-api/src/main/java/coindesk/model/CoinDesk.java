@@ -4,12 +4,11 @@ import java.time.LocalDate;
 
 
 public class CoinDesk {
-    private LocalDate time;
-    private Long currency;
+    private final LocalDate time;
+    private final Long currency;
 
     public CoinDesk(String time, Long currency){
-        LocalDate localDate = LocalDate.parse(time);
-        this.time=localDate;
+        this.time= LocalDate.parse(time);
         this.currency=currency;
     }
 
