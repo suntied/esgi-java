@@ -5,14 +5,14 @@ import java.time.LocalDate;
 
 public class CoinDesk {
     private final LocalDate time;
-    private final Long currency;
+    private final Double currency;
 
-    public CoinDesk(String time, Long currency){
+    public CoinDesk(String time, Double currency){
         this.time= LocalDate.parse(time);
         this.currency=currency;
     }
 
-    public CoinDesk(LocalDate time, Long currency) {
+    public CoinDesk(LocalDate time, Double currency) {
         this.time = time;
         this.currency = currency;
     }
@@ -21,7 +21,7 @@ public class CoinDesk {
         return time;
     }
 
-    public Long getCurrency() {
+    public Double getCurrency() {
         return currency;
     }
 }

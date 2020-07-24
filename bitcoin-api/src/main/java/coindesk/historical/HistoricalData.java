@@ -35,11 +35,11 @@ public class HistoricalData extends AbstractData {
         setURL(String.format("%s?currency=%s&index=%s", HISTORICAL_ENDPOINT, currency, index));
         getBPI(getURL());
     }
-
+    @Override
     public void getBPI(LocalDate start, LocalDate end) throws CoinDeskException {
         getBPI(start, end, "USD", USD_INDEX);
     }
-
+    @Override
     public void getBPI(LocalDate start, LocalDate end, String currency) throws CoinDeskException {
         getBPI(start, end, currency, USD_INDEX);
     }
