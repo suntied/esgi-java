@@ -4,10 +4,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="536.0" spacing="20.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esgi.javafx.SecondaryController">
+<VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="536.0" spacing="20.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esgi.javafx.SecondaryController">
     <children>
         <Label text="Secondary View" />
-      <LineChart fx:id="lineChart" title="Bitcoin Currency">
+      <LineChart fx:id="lineChart" prefHeight="372.0" prefWidth="388.0" title="Bitcoin Currency">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>

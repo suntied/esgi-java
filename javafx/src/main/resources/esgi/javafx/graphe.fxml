@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1085.0" prefWidth="1518.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esgi.javafx.grapheController">
+   <children>
+      <VBox prefHeight="814.0" prefWidth="144.0" style="-fx-background-color: #9932CC;">
+         <children>
+            <Button fx:id="btnProfileGraphe" mnemonicParsing="false" onAction="#switchToProfile" prefHeight="39.0" prefWidth="143.0" style="-fx-background-color: #9932CC;" text="PROFIL" />
+         </children></VBox>
+      <Button fx:id="history" layoutX="424.0" layoutY="540.0" mnemonicParsing="false" onAction="#getHistorical" text="load" />
+      <LineChart fx:id="lineChart" layoutX="153.0" layoutY="14.0" prefHeight="526.0" prefWidth="769.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>
